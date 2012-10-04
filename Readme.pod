@@ -1,0 +1,114 @@
+=pod
+
+=head1 NAME
+
+Mojolicious::Plugin::LessRenderer - Use LESS in your Mojolicious templates
+
+
+=head1 SYNOPSIS
+
+  $app->plugin('LessRenderer');
+
+
+=head1 DESCRIPTION
+
+L<Mojolicious::Plugin::Piwik> is a simple plugin for embedding
+Piwik Analysis to your Mojolicious app.
+
+
+=head1 METHODS
+
+=head2 C<register>
+
+  # Mojolicious
+  $app->plugin('LessRenderer');
+
+  # Mojolicious::Lite
+  plugin 'LessRenderer';
+
+Called when registering the plugin.
+
+
+=head1 HANDLER
+
+=head2 C<less>
+
+Converts a LESS stylesheet to CSS on the fly.
+Supports template caching.
+
+
+=head2 C<lessc>
+
+Converts a LESS stylesheet to a compressed CSS on the fly.
+Supports template caching.
+
+B<This handler is EXPERIMENTAL and may change without warnings.>
+
+
+=head1 HELPERS
+
+=head2 C<less_stylesheet>
+
+  # In a template
+  %= less_stylesheet begin
+    p {
+      color: #000;
+      a {
+        color: red;
+      }
+    }
+    p {
+      font-size: 12pt;
+    }
+  % end
+
+Renders LESS stylesheet code inline.
+
+
+=head2 C<lessc_stylesheet>
+
+  # In a template
+  %= lessc_stylesheet begin
+    p {
+      color: #000;
+      a {
+        color: red;
+      }
+    }
+    p {
+      font-size: 12pt;
+    }
+  % end
+
+Renders LESS stylesheet code inline and
+compresses it on the fly.
+
+B<This helper is EXPERIMENTAL and may change without warnings.>
+
+
+=head1 DEPENDENCIES
+
+L<Mojolicious>,
+L<CSS::LESSp>,
+L<CSS::Compressor>.
+
+
+=head1 BUGS
+
+As this plugin uses L<CSS::LESSp> and L<CSS::Compressor>,
+it has their limitations.
+
+
+=head1 AVAILABILITY
+
+  https://github.com/Akron/Mojolicious-Plugin-LessRenderer
+
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2012, Nils Diewald.
+
+This program is free software, you can redistribute it
+and/or modify it under the same terms as Perl.
+
+=cut
