@@ -9,7 +9,7 @@ WriteMakefile(
     NAME         => 'Mojolicious::Plugin::LessRenderer',
     AUTHOR       => 'Nils Diewald',
     PREREQ_PM => {
-        'Mojolicious' => 3.43,
+        'Mojolicious' => 5.00,
         'CSS::LESSp' => 0.86,
 	'CSS::Compressor' => 0.02
     },

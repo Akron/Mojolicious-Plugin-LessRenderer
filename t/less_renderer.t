@@ -29,13 +29,13 @@ CSS
 like($c->less_stylesheet(sub { $css }), qr/p a /, 'less_stylesheet' );
 unlike($c->lessc_stylesheet(sub { $css }), qr/\s\s/, 'lessc_stylesheet' );
 
-like($c->render_partial(
+like($c->render_to_string(
   inline => $css,
   format => 'css',
   handler => 'less'
 ), qr/p a /, 'less_handler');
 
-unlike($c->render_partial(
+unlike($c->render_to_string(
   inline => $css,
   format => 'css',
   handler => 'lessc'

@@ -163,6 +163,7 @@ __END__
 Mojolicious::Plugin::LessRenderer - Use LESS in your Mojolicious templates
 
 B<Due to many bugs in L<CSS::LESSp> I cannot recommend using this plugin!!!>
+B<Please consider using L<Mojolicious::Plugin::AssetPack> instead!>
 
 =head1 SYNOPSIS
 
